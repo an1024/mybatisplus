@@ -2,7 +2,6 @@ package ${package.Mapper};
 
 import ${package.Entity}.${entity};
 import ${superMapperClassPackage};
-import java.util.List;
 
 /**
  * <p>
@@ -16,16 +15,6 @@ import java.util.List;
 interface ${table.mapperName} : ${superMapperClass}<${entity}>
 <#else>
 public interface ${table.mapperName} extends ${superMapperClass}<${entity}> {
-
-    Integer updateByPrimaryKeySelective(${entity} ${table.entityPath});
-
-    Long insertSelective(${entity} ${table.entityPath});
-
-    ${entity} selectByPrimaryKey(Long id);
-
-    Integer selectCountByExample(${entity} ${table.entityPath});
-
-    List<${entity}> selectListByExample(${entity} ${table.entityPath});
 
 }
 </#if>

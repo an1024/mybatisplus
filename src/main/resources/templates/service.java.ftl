@@ -1,10 +1,7 @@
 package ${package.Service};
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import ${package.Entity}.${entity};
 import ${superServiceClassPackage};
-
-import java.util.List;
 
 /**
  * <p>
@@ -19,4 +16,5 @@ interface ${table.serviceName} : ${superServiceClass}<${entity}>
 <#else>
 public interface ${table.serviceName} extends ${superServiceClass}<${entity}> {
 
+}
 </#if>
